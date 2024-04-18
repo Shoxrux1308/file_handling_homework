@@ -6,5 +6,17 @@ def main(data:str):
     Returns:
         list: return answer
     """
+    f = open(data, mode="r")
+    x=f.read()
+    
+    l=''
+    k=0
+    for i in x:
+        if i.isdigit():
+            k+=1
+        if i.isalpha():
+            l+=i
+    return [len(l),k]
+print(main("data05.txt"))
     
 # Read data from file
